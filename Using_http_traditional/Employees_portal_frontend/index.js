@@ -14,19 +14,19 @@ let fetchAllEmployees = () => {
     let employeeRows = "";
     for (let employee of employees) {
       employeeRows += `
-      <tr>
-      <td>${employee.id}</td>
-      <td>${employee.first_name}</td>
-      <td>${employee.last_name}</td>
-      <td>${employee.email}</td>
-      <td>${employee.gender}</td>
-      <td>${employee.ip_address}</td>
-      <td>
-        <button class="btn btn-primary update" data-bs-toggle="modal"
-        data-bs-target="#updateModal" >Update</button>
-        <button class="btn btn-danger delete">Delete</button>
-      </td>
-    </tr>`;
+                        <tr>
+                          <td>${employee.id}</td>
+                          <td>${employee.first_name}</td>
+                          <td>${employee.last_name}</td>
+                          <td>${employee.email}</td>
+                          <td>${employee.gender}</td>
+                          <td>${employee.ip_address}</td>
+                          <td>
+                            <button class="btn btn-primary update" data-bs-toggle="modal"
+                            data-bs-target="#updateModal" >Update</button>
+                            <button class="btn btn-danger delete">Delete</button>
+                          </td>
+                      </tr>`;
     }
     document.querySelector("#table-body").innerHTML = employeeRows;
   });
